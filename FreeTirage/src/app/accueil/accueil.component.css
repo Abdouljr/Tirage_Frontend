@@ -1,0 +1,156 @@
+
+  /*--------------------------------------------------------------
+  # Hero Section
+  --------------------------------------------------------------*/
+  #hero {
+    width: 100%;
+    height: 80vh;
+    background: #f9f9f9;
+  }
+  
+  #hero .container {
+    padding-top: 84px;
+  }
+  
+  #hero h1 {
+    margin: 0;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #0f394c;
+    text-transform: uppercase;
+  }
+  
+  #hero h2 {
+    color: #1c698c;
+    margin: 10px 0 0 0;
+    font-size: 20px;
+  }
+  
+  #hero .btn-get-started {
+    font-family: "Dosis", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 28px;
+    border-radius: 3px;
+    transition: 0.5s;
+    margin-top: 25px;
+    color: #fff;
+    background: #D3E3F5;
+    text-transform: uppercase;
+  }
+  
+  #hero .btn-get-started:hover {
+    background: #76c7ed;
+  }
+  
+  @media (max-width: 991px) {
+    #hero {
+      height: 100vh;
+      text-align: center;
+    }
+  
+    #hero .hero-img img {
+      width: 50%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #hero h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  
+    #hero h2 {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  
+    #hero .hero-img img {
+      width: 80%;
+    }
+  }
+  /*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+    padding: 60px 0;
+    overflow: hidden;
+  }
+  
+  .section-bg {
+    background-color: #f4fbfe;
+  }
+  
+  .section-title {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  
+  .section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    color: #0f394c;
+  }
+  
+  .section-title p {
+    margin-bottom: 0;
+  }
+
+
+
+#navbar {
+  padding: 0;
+  background-color: #D3E3F5;
+  /*rectangle top right bas left*/
+  padding: 10px 0 10px 30px;
+
+}
+#navbar p {
+  text-align: center;
+  font-weight: 600;
+  font-size:x-large;
+  margin: right -300px;
+}
+.mesbtn{
+  display: flex;
+  justify-content: space-around;
+  /*marge exterieurs haut et bas*/
+}
+.mescartes{
+  /*disposer les duex rect sur la meme ligne*/
+  display: flex;
+  /*escpace sur les cotés et entre les deux rect*/
+  justify-content: space-around;
+  /*marge exterieurs haut et bas*/
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.card{ 
+  height: 354px; 
+  background-color: #D3E3F5;
+}
+
+
+.card .cercle{
+  
+    height: 200px; 
+		width: 200px; 
+		border: 5px solid rgba(0, 0, 0, 1);
+		border-radius: 50%; 
+    text-align: center;
+    padding-top: 30%;
+    /*Positiondu cercle  marge exterieure par rapport au rect */
+    margin-left: 10%;
+    margin-top: 10%;
+
+    background-color: #76c7ed;
+}
+
+
