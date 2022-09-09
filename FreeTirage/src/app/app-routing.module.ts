@@ -11,14 +11,14 @@ const routes: Routes = [
    //lorsqun chemin nest pas defini => rediriger vers /mes declaratioins
   {
     path:"",
-    redirectTo:'/accueil',
+    redirectTo:'/tirage',
     pathMatch:'full'
   },
   //lorsqu'on ecrit dans l'url "dliste"   => DetailListeComponent s'execute
   {path:"tirage",component:FaireTirageComponent},
   {path:"accueil",component:AccueilComponent},
-  {path:"dliste",component:DetailListeComponent},
-  {path:"dtirage",component:DetailTirageComponent},
+  {path:"detaill",component:DetailListeComponent},
+  {path:"detailt",component:DetailTirageComponent},
   
   
 ];

@@ -38,7 +38,7 @@
     transition: 0.5s;
     margin-top: 25px;
     color: #fff;
-    background: #49b5e7;
+    background: #D3E3F5;
     text-transform: uppercase;
   }
   
@@ -101,5 +101,56 @@ section {
   .section-title p {
     margin-bottom: 0;
   }
+
+
+
+#navbar {
+  padding: 0;
+  background-color: #D3E3F5;
+  /*rectangle top right bas left*/
+  padding: 10px 0 10px 30px;
+
+}
+#navbar p {
+  text-align: center;
+  font-weight: 600;
+  font-size:x-large;
+  margin: right -300px;
+}
+.mesbtn{
+  display: flex;
+  justify-content: space-around;
+  /*marge exterieurs haut et bas*/
+}
+.mescartes{
+  /*disposer les duex rect sur la meme ligne*/
+  display: flex;
+  /*escpace sur les cotés et entre les deux rect*/
+  justify-content: space-around;
+  /*marge exterieurs haut et bas*/
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.card{ 
+  height: 354px; 
+  background-color: #D3E3F5;
+}
+
+
+.card .cercle{
   
-  
+    height: 200px; 
+		width: 200px; 
+		border: 5px solid rgba(0, 0, 0, 1);
+		border-radius: 50%; 
+    text-align: center;
+    padding-top: 30%;
+    /*Positiondu cercle  marge exterieure par rapport au rect */
+    margin-left: 10%;
+    margin-top: 10%;
+
+    background-color: #76c7ed;
+}
+
+

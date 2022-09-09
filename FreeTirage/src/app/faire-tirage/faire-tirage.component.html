@@ -1,1 +1,28 @@
-<p>faire-tirage works!</p>
+
+
+<div class="container">
+    <div class="brand-logo">
+    <img src="/Users/issiakacoulibaly/Documents/Tirage_Frontend/FreeTirage/src/assets/img/logo.png" alt="">  
+    <div class="brand-title">Tirage en Ligne</div>  
+    </div>
+   
+    <div class="inputs">
+      <label>Nom du Tirage</label>
+      <input type="email" placeholder="Donner un nom à votre tirage" />
+
+      <label>Nombre de personne à tirer</label>
+      <input type="number" placeholder="Entrer un nombre" />
+
+
+      <label>Importer une liste à Trier</label>
+      <input type="file" />
+        <label> Choississez une liste</label>
+      <select class="form-select" id="select" formControlName="genre" class="form-control" aria-label="Default select example">
+        <option value="" selected > Mes listes</option>
+        <option value="1">Homme</option>
+        <option value="2">Femme</option>
+      </select>
+      <button type="submit">Enregistrer</button>
+    </div>
+    
+  </div>
