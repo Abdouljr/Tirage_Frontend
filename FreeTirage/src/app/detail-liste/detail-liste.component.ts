@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { TirageService } from '../tirage.service';
+import { Personne } from './Personnes';
 
 @Component({
   selector: 'app-detail-liste',
@@ -6,10 +9,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detail-liste.component.css']
 })
 export class DetailListeComponent implements OnInit {
+  personnes: Observable<Object[]>;
+  nombre: number;
+  constructor(private tirageService: TirageService) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit() {
+    this.personnes = this.tirageService.getPostulants();
+}
 
 }

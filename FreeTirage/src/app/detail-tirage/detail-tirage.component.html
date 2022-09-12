@@ -1,1 +1,38 @@
-<p>detail-tirage works!</p>
+<div>
+    <p>ici/p>
+</div>
+
+<h2>et là</h2>
+
+
+<h2>Liste des personnes triées de la liste Etudiant</h2>
+<section>
+    <div>
+        <table class="tableau-style">
+            <thead>
+                <tr>
+                    <th><span>Prenom</span></th>
+                    <th><span>Nom</span></th>
+                    <th><span>Numero</span></th>
+                    <th><span>Email</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let n of personnes">
+                    <td> {{n.prenom}} </td>
+                    <td> {{n.nom}} </td>
+                    <td> {{n.numero}} </td>
+                    <td> {{n.email}} </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="description">
+            <p>Libellé : tirage1</p>
+            <p>Nombre : {{nombre}} </p>
+            <p>Fait le : {{personnes[0].date | date: "dd/MM/yyyy"}} </p>
+        </div>
+    </div>
+    <div class="image">
+        <img src="../../assets/img/tirage2.png">
+    </div>
+</section>
