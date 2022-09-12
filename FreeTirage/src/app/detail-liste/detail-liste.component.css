@@ -24,4 +24,74 @@ body {
   h6 {
     font-family: "Dosis", sans-serif;
   }
+
+
+    .tableau-style {
+      border-collapse: collapse;
+      min-width: 400px;
+      width: auto;
+      box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.20);
+      cursor: pointer;
+      margin: 100px 0px 50px 100px;
+      /* border: solid 2px midnightblue; */
+      border: solid 1px #ddd;
+    }
   
+    thead tr {
+      background-color: #76C7ED;
+      color: #000;
+      text-align: center;
+    }
+  
+    th,
+    td {
+      padding: 15px 15px;
+    }
+  
+    tbody,
+    th,
+    td {
+      border: solid 1px #ddd;
+    }
+  
+    tbody tr:nth-child(even) {
+      background-color: #f3f3f3;
+    }
+  
+    tbody tr:last-of-type {
+      border-bottom: solid 2px #76C7ED;
+    }
+
+    section {
+      display: flex;
+    }
+
+    .tirage {
+      margin-top: 98px;
+      margin-left: 10%;
+      width: 100%;
+    }
+
+    button {
+    background: #76C7ED;
+    border-radius: 20px;
+    width: 200px;
+    height: 35px;
+    display: block;
+    margin: 20px 100px;
+    font-weight: bold;
+    border: solid 0.75px;
+    }
+
+    .titretirage {
+      margin-left: 30px;
+      margin-bottom: 35px;
+    }
+
+    .description {
+      margin-left: 100px;
+    }
+
+    p {
+      font-weight: bold;
+    }
