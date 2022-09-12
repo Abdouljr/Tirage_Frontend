@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { TirageService } from '../tirage.service';
-import { Personne } from './Personnes';
 
 @Component({
   selector: 'app-detail-liste',
