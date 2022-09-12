@@ -8,7 +8,6 @@ import { FaireTirageComponent } from './faire-tirage/faire-tirage.component';
 import { DetailListeComponent } from './detail-liste/detail-liste.component';
 import { DetailTirageComponent } from './detail-tirage/detail-tirage.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 import { ImportListeComponent } from './import-liste/import-liste.component';
 
 @NgModule({
@@ -22,11 +21,10 @@ import { ImportListeComponent } from './import-liste/import-liste.component';
   ],
   imports: [
     BrowserModule,
-
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-  HttpClientModule,
+    HttpClientModule,
   
     
   ],

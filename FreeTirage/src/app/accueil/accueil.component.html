@@ -104,7 +104,7 @@
                 <th scope="row">  {{l.id_list}}</th> 
                 <td>{{l.libelle}} </td>
                 <td>{{liste.length}} </td>
-                <td>{{l.dateimport}} </td>
+                <td>{{l.dateimport | date: "dd/MM/yyyy"}} </td>
                 <td><button  class= "btn btn-sm btn-info"  routerLink="/detaill"> 
                   <i  class= "fa fa-search" ></i> Détails </button> 
             

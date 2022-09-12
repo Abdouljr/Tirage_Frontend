@@ -11,28 +11,32 @@
         <table class="tableau-style">
             <thead>
                 <tr>
-                    <th><span>Prenom</span></th>
-                    <th><span>Nom</span></th>
-                    <th><span>Numero</span></th>
-                    <th><span>Email</span></th>
+                    <th>Id</th>
+                    <th>Prenom</th>
+                    <th>Nom</th>
+                    <th>Numero</th>
+                    <th>Email</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let n of personnes">
+                <tr *ngFor="let n of postulants">
+                    <td> {{n.id_postulant}} </td>
                     <td> {{n.prenom}} </td>
                     <td> {{n.nom}} </td>
                     <td> {{n.numero}} </td>
                     <td> {{n.email}} </td>
-                </tr>
+                </tr>             
             </tbody>
         </table>
-        <div class="description">
-            <p>Libellé : tirage1</p>
-            <p>Nombre : {{nombre}} </p>
-            <p>Fait le : {{personnes[0].date | date: "dd/MM/yyyy"}} </p>
-        </div>
-    </div>
-    <div class="image">
-        <img src="../../assets/img/tirage2.png">
-    </div>
+        <div class="description">           
+            <p>Nom : ListeEtudiant</p>
+            <p>N° Personnes : {{tirages[0].libelle_tirage}} </p>
+            <p>Fait le : 12/03/2022</p>
+        </div>:
+    </div>        
+    <div class="tirage">
+        <h3 class="titretirage">Tirages effectués sur cette liste</h3>
+        <p *ngFor="let t of tirages"><button> {{t.libelle_tirage}}  </button></p>
+        
+    </div>          
 </section>
