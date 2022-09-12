@@ -8,12 +8,12 @@ import { TirageService } from '../tirage.service';
   styleUrls: ['./detail-tirage.component.css']
 })
 export class DetailTirageComponent implements OnInit {
-  personnes: Personne[];
+  personnes: any;
   nombre: number;
   constructor(private tirageService: TirageService) { }
 
   ngOnInit() {
-    this.personnes = this.tirageService.getPersonnes(); 
+    this.personnes = this.tirageService.getPostulants(); 
     this.nombre = this.personnes.length;
   }
 
