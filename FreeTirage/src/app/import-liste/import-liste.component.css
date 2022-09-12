@@ -17,35 +17,26 @@ body {
   overflow: hidden;
   font-family: poppins;
 }
-.mesformmm{
-  /*disposer les duex rect sur la meme ligne*/
-  display: flex;
-  /*escpace sur les cotés et entre les deux rect*/
-  justify-content: space-around;
-  /*marge exterieurs haut et bas*/
-  margin-top: 10%;
-  margin-bottom: 5%;
-}
 
 .container {
   position: relative;
   width: 350px;
-  height: 600px;
+  height: 700px;
   border-radius: 20px;
   padding: 40px;
-  padding-top: 50px;
+  padding-top: 90px;
   box-sizing: border-box;
   background: #ecf0f3;
   box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
 }
 
 .brand-logo {
-  height: 120px;
-  width: 300px;
+  height: 100px;
+  width: 200px;
   /*
   background: url("/Users/issiakacoulibaly/Documents/Tirage_Frontend/FreeTirage/src/assets/img/logo.png");
 */
-  margin-left: -15px;
+  margin: auto;
   border-radius: 50%;
   box-sizing: border-box;
   box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
@@ -63,27 +54,6 @@ body {
   text-align: left;
   margin-top: 30px;
 }
-#select{
-  margin-bottom: 4px;
-  text-align: left;
-  margin-top: 30px;
-  display: block;
-  width: 100%;
-  padding: 0;
-  border: none;
-  outline: none;
-  box-sizing: border-box;
-  margin-top: 12px;
-  background: #ecf0f3;
-  padding: 10px;
-  padding-left: 20px;
-  height: 50px;
-  font-size: 14px;
-  border-radius: 50px;
-  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
-  color: gray;
-}
-
 label, input, button {
   display: block;
   width: 100%;
@@ -129,18 +99,6 @@ button {
 
 button:hover {
   box-shadow: none;
-}
-
-a {
-  position: absolute;
-  font-size: 8px;
-  bottom: 4px;
-  right: 4px;
-  text-decoration: none;
-  color: black;
-  background: yellow;
-  border-radius: 10px;
-  padding: 2px;
 }
 
 h1 {
