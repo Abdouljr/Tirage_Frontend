@@ -1,0 +1,24 @@
+
+<div class="container">
+    <div class="brand-logo">
+    <img src="/Users/issiakacoulibaly/Documents/Tirage_Frontend/FreeTirage/src/assets/img/logo.png" alt="">  
+    <div class="brand-title">Importer une liste
+    </div>  
+    </div>
+    <form  [formGroup]="formmodule" (ngSubmit)="importerliste()" > 
+    <div class="inputs">
+      <label >Nom de la liste </label>
+      <input type="email" placeholder="Donner un nom à votre tirage"   name="libelle" formControlName="libelle" class="form-control"/>
+
+      <label>Date d'importation</label>
+      <input type="date" name="dateimport" formControlName="dateimport" class="form-control"/>
+
+
+      <label>choisir le fichier</label>
+      <input type="file"  name="file" formControlName="file" class="form-control" (change)="fileChange($event)" />
+
+      <button type="submit">Importer</button>
+    </div>
+  </form>
+    
+  </div>

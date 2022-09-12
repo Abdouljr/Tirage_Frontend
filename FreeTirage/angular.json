@@ -65,9 +65,12 @@
           "configurations": {
             "production": {
               "browserTarget": "FreeTirage:build:production"
+        
             },
+            
             "development": {
               "browserTarget": "FreeTirage:build:development"
+              
             }
           },
           "defaultConfiguration": "development"
