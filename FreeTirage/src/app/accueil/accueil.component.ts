@@ -1,7 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Liste } from '../liste';
+import { MesListes } from '../meslistes';
 import { RequeteserviceService } from '../requeteservice.service';
+import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
+
+
 
 @Component({
   selector: 'app-accueil',
@@ -10,13 +14,20 @@ import { RequeteserviceService } from '../requeteservice.service';
 })
 export class AccueilComponent implements OnInit {
   liste:any;
+  
+
+  
   constructor(private service:RequeteserviceService) { }
 
   ngOnInit(): void {
       this.getlist();
   }
-
   
+
+
+
+
+
   getlist(){
     this.service.getListes().subscribe(
       response => {

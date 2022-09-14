@@ -74,59 +74,47 @@
           <table class="table">
             <thead>
               <tr>
-                <th scope="col">N°</th>
-                <th scope="col">Nom Liste</th>
-                <th scope="col">Nombre d'elements</th>
-                <th scope="col">Nombre de tirage</th>
-              
-                <th scope="col">Actions
-                </th>
+                <th scope="col" name="num"> N°</th>
+                <th scope="col" name="nomliste">Nom Liste</th>
+                <th scope="col" name="nbredetirage" >Nombre de tirage</th>
+                <th scope="col" name="dateimport" >Date </th>
+                <th scope="col" name="action" >Actions</th>
                 
               </tr>
             </thead>
             <tbody>
-              <tr >
-                <th scope="row"> 0</th>
-                <td> listeA </td>
-                <td>20post </td>
-                <td>3t</td>
-              
-                <td><button  class= "btn btn-sm btn-info" > 
-                  <i  class= "fa fa-search" ></i> <a href="">  </a> Détails </button> 
-                
-                <button  class= "btn btn-sm btn-danger" > 
-                  <i  class= "fa fa-remove" ></i> Supprimer 
-                </button> </td>
+                <tr *ngFor="let l of liste  ">
+                      <th scope="row">  {{l.id_list}}</th> 
+                      <td>{{l.libelle}} </td>
+                      <td>{{liste.length}} </td>
+                      <td>{{l.dateimport | date: "dd/MM/yyyy"}} </td>
+                      <td>
+                        <button  class= "btn btn-sm btn-info"  routerLink="/detaill"> 
+                        <i  class= "fa fa-search" ></i> Détails </button> 
+                      <button  class= "btn btn-sm btn-danger" > 
+                        <i  class= "fa fa-remove" ></i> Supprimer 
+                      </button> </td>
+                      
+
               </tr>
 
-
-              <tr *ngFor="let l of liste ">
-                <th scope="row">  {{l.id_list}}</th> 
-                <td>{{l.libelle}} </td>
-                <td>{{liste.length}} </td>
-                <td>{{l.dateimport | date: "dd/MM/yyyy"}} </td>
-                <td><button  class= "btn btn-sm btn-info"  routerLink="/detaill"> 
-                  <i  class= "fa fa-search" ></i> Détails </button> 
-            
-                <button  class= "btn btn-sm btn-danger" > 
-                  <i  class= "fa fa-remove" ></i> Supprimer 
-                </button> </td>
-              </tr>
-             
-
-            </tbody>
+          </tbody>
           </table>
+          <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-end">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
     </div>
-    <div class="mesbtn">
-      <div>
-        <button type="button" class="btn btn-primary">Precedent</button>
-      </div>
-      <div>
-
-      <button type="button" class="btn btn-primary">Suivanttt</button>
-
-      </div>
-    </div>
+   
   </section>
 
 </body>

@@ -9,6 +9,9 @@ import { DetailListeComponent } from './detail-liste/detail-liste.component';
 import { DetailTirageComponent } from './detail-tirage/detail-tirage.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ImportListeComponent } from './import-liste/import-liste.component';
+import { NgbAlertModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
+import { PaginationComponent } from './pagination/pagination.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +20,9 @@ import { ImportListeComponent } from './import-liste/import-liste.component';
     FaireTirageComponent,
     DetailListeComponent,
     DetailTirageComponent,
-    ImportListeComponent
+    ImportListeComponent,
+    PaginationComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -25,6 +30,8 @@ import { ImportListeComponent } from './import-liste/import-liste.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgbPaginationModule,
+    NgbAlertModule
   
     
   ],

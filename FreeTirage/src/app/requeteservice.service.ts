@@ -40,4 +40,14 @@ export class RequeteserviceService {
   getListes():Observable<Object>{
     return this.http.get(`${this.apiUrl}/liste/list`);
   }
+
+  getUsers() {
+     
+    let list = [];
+ 
+    for (let index = 0; index < 100; index++) { 
+      list.push({num : "", nomliste :"", nbredetirage: " ", dateimport:"", action:""});
+    }
+    return list;
+  }
 }
