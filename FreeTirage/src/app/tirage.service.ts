@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -11,16 +10,19 @@ export class TirageService {
   constructor(private http: HttpClient ) { }
 
 
-  getPostulants(id_list:Number) :Observable<Object>{
-    return this.http.get(`http://localhost:8080/Postulant/liste/${id_list}`);
+  getPostulantParListe(id :Number) :Observable<Object>{
+    return this.http.get(`http://localhost:8080/Postulant/liste/${id}`);
 }
 
-getTirages() : Observable<object> {
-  return this.http.get<object>("http://localhost:8080/tirage/list");
+getTirages(libelle: string) : Observable<object> {
+  return this.http.get<object>(`http://localhost:8080/tirage/liste/${libelle}`);
+}
+getToutTirages() : Observable<object> {
+  return this.http.get<object>(`http://localhost:8080/tirage/list`);
 }
 
-getPostulantsTries() : Observable<object> {
-  return this.http.get("http://localhost:8080/tirage/list")
+getPostulantsTries(id: number) : Observable<object> {
+  return this.http.get(`http://localhost:8080/tirage/postulants/${id}`)
 }
 
 }

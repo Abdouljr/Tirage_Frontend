@@ -57,7 +57,7 @@
               <h2 class="card-title"> Tirages effectués sur toute les listes </h2>
             
               <div class="cercle">
-                666666
+                {{nb_tous_tirages}}
               </div>
               
             
@@ -103,17 +103,15 @@
               <tr *ngFor="let l of liste ">
                 <th scope="row">  {{l.id_list}}</th> 
                 <td>{{l.libelle}} </td>
-                <td>{{liste.length}} </td>
+                <td>{{nb_tirage}} </td>
                 <td>{{l.dateimport | date: "dd/MM/yyyy"}} </td>
-                <td><button  class= "btn btn-sm btn-info"  routerLink="/detaill"> 
+                <td><button   class= "btn btn-sm btn-info"  [routerLink]="['/detaill',l.id_list]"> 
                   <i  class= "fa fa-search" ></i> Détails </button> 
             
                 <button  class= "btn btn-sm btn-danger" > 
                   <i  class= "fa fa-remove" ></i> Supprimer 
                 </button> </td>
               </tr>
-             
-
             </tbody>
           </table>
     </div>
