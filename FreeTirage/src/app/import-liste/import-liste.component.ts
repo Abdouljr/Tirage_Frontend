@@ -35,12 +35,13 @@ this.formmodule=this.formB.group({
   /////////////////////////
   importerliste(){
     this.liste = this.formmodule.value
-    this.request.addliste(this.liste.libelle1, this.file).subscribe(
+    this.request.addliste(this.liste.libelle, this.file).subscribe(
       data =>{
         this.formmodule.reset()
       
       }
     )
   }
+  
  
 }

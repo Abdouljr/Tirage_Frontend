@@ -1,9 +1,4 @@
 
-<div>
-    <p>ici/p>
-</div>
-
-<h1>et là</h1>
 
 <section>
     <div>
@@ -18,26 +13,28 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let n of postulants">
+                <tr *ngFor="let n of postulants" >
                     <td> {{n.id_postulant}} </td>
                     <td> {{n.prenom}} </td>
                     <td> {{n.nom}} </td>
                     <td> {{n.numero}} </td>
-                    <td> {{n.email}} </td>
+                    <td> {{n.listImport.libelle}} </td>
+
                 </tr>             
             </tbody>
         </table>
         <div class="description">           
-            <p>Nom : ListeEtudiant</p>
+            <p>Nom : {{liste.libelle}} </p>
             <p>N° Personnes : {{nombre}} </p>
-            <p>Fait le : 12/03/2022</p>
-        </div>:ks
-    </div>        
+            <p>Date de Création: {{liste.dateimport | date: "dd/MM/yyyy"}} </p>
+        </div>
+    </div>   
+
     <div class="tirage">
-        <h3 class="titretirage">Tirages effectués sur cette liste</h3>
-        <button>Tirages </button>
-        <button>Tirages </button>
-        <button>Tirages </button>
+
+        <h2 class="titretirage">Tirages effectués sur cette liste</h2>
+        <p class="titretirate" *ngIf="!tirages"> Aucun tirages sur cette liste</p>
+        <p *ngFor="let t of tirages"><button [routerLink]="['/detailt', t.id_tirage]"> {{t.libelle_tirage}} </button></p>
     </div>          
 </section>
 

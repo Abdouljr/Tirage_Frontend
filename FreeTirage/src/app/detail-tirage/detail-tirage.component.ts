@@ -9,14 +9,14 @@ import { TirageService } from '../tirage.service';
   styleUrls: ['./detail-tirage.component.css']
 })
 export class DetailTirageComponent implements OnInit {
-  postulants: any;
+  postulantsTries: any;
   tirages: any;
-  nombre: number = 10;
-  liste:Liste;
+  nombre: number = 0;
+
   constructor(private tirageService: TirageService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-      //const listeId: string | null = this.route.snapshot.paramMap.get('id');
+      const listeId: string | null = this.route.snapshot.paramMap.get('id');
       
       // if(listeId){
       //   this.tirageService.getPostulants().subscribe(data => {
@@ -24,15 +24,23 @@ export class DetailTirageComponent implements OnInit {
       // } )
       // }
 
-        this.tirageService.getPostulants(this.liste.id_list).subscribe(data => {
-        this.postulants = data
-        } )
-
-      this.tirageService.getTirages().subscribe(donnee_tirage => {
-        this.tirages = donnee_tirage 
-    })
+      if(listeId){
+        this.tirageService.getPostulantsTries(+listeId).subscribe(data => {
+          this.postulantsTries = data
+          console.table(this.postulantsTries)
+          for (const p of this.postulantsTries) {
+            this.nombre +=1
+          }
+          } )
+      }
+    }
+    
 
 
   }
+    //   this.tirageService.getTirages().subscribe(donnee_tirage => {
+    //     this.tirages = donnee_tirage 
+    // })
 
-}
+
+

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { NewTirage } from './newtirage';
+import { Postulants } from './postulants';
 
 @Injectable({
   providedIn: 'root'
@@ -40,14 +41,21 @@ export class RequeteserviceService {
   getListes():Observable<Object>{
     return this.http.get(`${this.apiUrl}/liste/list`);
   }
+//recuperer les post par idlist
+  getPostulants(id_list:number):Observable<Postulants[]>{
 
-  getUsers() {
-     
-    let list = [];
- 
-    for (let index = 0; index < 100; index++) { 
-      list.push({num : "", nomliste :"", nbredetirage: " ", dateimport:"", action:""});
-    }
-    return list;
+   return this.http.get<Postulants[]> (`${this.apiUrl}/Postulant/list/${id_list}`);
   }
+//
+getNombreTirageParListe(id_list:number):Observable<any>{
+
+  return this.http.get(`${this.apiUrl}/tirage/findtirage/${id_list}`)
+}
+
+  getTirageParListe(id_list:number):Observable<any>{
+
+    return this.http.get(`${this.apiUrl}/tirage/recupererTirageParIdlidte/${id_list}`)
+  }
+
+
 }

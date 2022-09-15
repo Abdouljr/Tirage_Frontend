@@ -18,8 +18,8 @@ const routes: Routes = [
   //lorsqu'on ecrit dans l'url "dliste"   => DetailListeComponent s'execute
   {path:"tirage",component:FaireTirageComponent},
   {path:"accueil",component:AccueilComponent},
-  {path:"detaill",component:DetailListeComponent},
-  {path:"detailt",component:DetailTirageComponent},
+  {path:"detaill/:id",component:DetailListeComponent},
+  {path:"detailt/:id",component:DetailTirageComponent},
   {path:"import",component:ImportListeComponent},
 
   
