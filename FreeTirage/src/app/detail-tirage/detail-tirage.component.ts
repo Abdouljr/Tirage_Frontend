@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Personne } from '../detail-liste/Personnes';
+import { ActivatedRoute } from '@angular/router';
+import { Liste } from '../liste';
 import { TirageService } from '../tirage.service';
 
 @Component({
@@ -8,13 +9,30 @@ import { TirageService } from '../tirage.service';
   styleUrls: ['./detail-tirage.component.css']
 })
 export class DetailTirageComponent implements OnInit {
-  personnes: Personne[];
-  nombre: number;
-  constructor(private tirageService: TirageService) { }
+  postulants: any;
+  tirages: any;
+  nombre: number = 10;
+  liste:Liste;
+  constructor(private tirageService: TirageService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.personnes = this.tirageService.getPersonnes(); 
-    this.nombre = this.personnes.length;
+      //const listeId: string | null = this.route.snapshot.paramMap.get('id');
+      
+      // if(listeId){
+      //   this.tirageService.getPostulants().subscribe(data => {
+      //   this.postulants = data
+      // } )
+      // }
+
+        this.tirageService.getPostulants(this.liste.id_list).subscribe(data => {
+        this.postulants = data
+        } )
+
+      this.tirageService.getTirages().subscribe(donnee_tirage => {
+        this.tirages = donnee_tirage 
+    })
+
+
   }
 
 }

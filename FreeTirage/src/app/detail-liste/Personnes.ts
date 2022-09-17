@@ -1,5 +1,5 @@
 export class Personne{
-    id: number;
+    id_postulant: number;
     prenom: string;
     nom: string;
     numero: number;

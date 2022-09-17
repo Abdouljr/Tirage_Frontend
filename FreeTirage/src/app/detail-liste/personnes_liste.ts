@@ -2,51 +2,56 @@ import { Personne } from "./Personnes"
 
 export const PERSONNES: Personne[] = [
     {
-        id: 1,
-        prenom: "Abdoulaziz",
+        id_postulant: 1,
         nom: "Maïga",
-        numero: 79522067,
+        prenom: "Abdoulaziz",
         email: "maiga@gmail.com",
+        numero: 79522067,
         date: new Date()
     },
     {
-        id: 2,
-        prenom: "Fatoumata",
+        id_postulant: 2,
         nom: "Coulibaly",
-        numero: 78080080,
+        prenom: "Fatoumata",
         email: "fc@gmail.com",
+        numero: 78080080,
         date: new Date()
+    
     },
     {
-        id: 3,
-        prenom: "jean",
+        id_postulant: 3,
         nom: "Sagara",
-        numero: 79900889,
+        prenom: "jean",
         email: "jean@gmail.com",
+        numero: 79900889,
         date: new Date()
+    
     },
     {
-        id: 4,
-        prenom: "Seckou",
+        id_postulant: 4,
         nom: "Diakité",
+        prenom: "Seckou",
+        email: "seckou@gmail.com",
         numero: 76622200,
-        email: "seckou@gmail.com",
         date: new Date()
+        
     },
     {
-        id: 3,
-        prenom: "Abdoulaye",
+        id_postulant: 3,
         nom: "Sy",
-        numero: 100000,
+        prenom: "Abdoulaye",
         email: "sy@gmail.com",
+        numero: 100000,
         date: new Date()
+    
     },
     {
-        id: 4,
-        prenom: "Ibrahima",
+        id_postulant: 4,
         nom: "Balo",
-        numero: 7666666,
+        prenom: "Ibrahima",
         email: "seckou@gmail.com",
+        numero: 7666666,
         date: new Date()
+    
     }
 ]

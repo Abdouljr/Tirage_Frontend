@@ -1,30 +1,31 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, Observable, of, tap } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TirageService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient ) { }
 
-  getPostulants(): Observable<Object[]>{
-    return this.http.get<Object[]>('http://localhost:8080/Postulant/list').pipe(
-      tap((postulants) => console.table(postulants)),
-      catchError((error) => {
-        console.log(error)
-        return of([]);
-      })
-    )
+
+  getPostulants(id_list:Number) :Observable<Object>{
+    return this.http.get(`http://localhost:8080/Postulant/liste/${id_list}`);
 }
 
-  deletePostulantById(id: number) :Observable<Object[] | undefined> {
-    return this.http.get<object[]>(`http://localhost:8080/delete/${id}`).pipe(
-      tap((postulant) => console.table(postulant)),
-      catchError((erreur) => {console.log(erreur);
-      return of(undefined);
-      })
-    )
+getTirages() : Observable<object> {
+  return this.http.get<object>("http://localhost:8080/tirage/list");
 }
+
+getPostulantsTries() : Observable<object> {
+  return this.http.get("http://localhost:8080/tirage/list")
 }
+
+}
+//   deletePostulantById(id: number) :Observable<Object[] | undefined> {
+//      return this.http.get<object>(`http://localhost:8080/delete/${id}`);
+    
+// }
+

@@ -10,6 +10,7 @@
         <table class="tableau-style">
             <thead>
                 <tr>
+                    <th>Id</th>
                     <th>Prenom</th>
                     <th>Nom</th>
                     <th>Numero</th>
@@ -17,7 +18,8 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let n of personnes">
+                <tr *ngFor="let n of postulants">
+                    <td> {{n.id_postulant}} </td>
                     <td> {{n.prenom}} </td>
                     <td> {{n.nom}} </td>
                     <td> {{n.numero}} </td>
@@ -29,7 +31,7 @@
             <p>Nom : ListeEtudiant</p>
             <p>N° Personnes : {{nombre}} </p>
             <p>Fait le : 12/03/2022</p>
-        </div>
+        </div>:ks
     </div>        
     <div class="tirage">
         <h3 class="titretirage">Tirages effectués sur cette liste</h3>
@@ -38,3 +40,4 @@
         <button>Tirages </button>
     </div>          
 </section>
+

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 import { TirageService } from '../tirage.service';
+
 
 @Component({
   selector: 'app-detail-liste',
@@ -8,12 +9,17 @@ import { TirageService } from '../tirage.service';
   styleUrls: ['./detail-liste.component.css']
 })
 export class DetailListeComponent implements OnInit {
-  personnes: Observable<Object[]>;
-  nombre: number;
-  constructor(private tirageService: TirageService) { }
+  postulants: any;
+  nombre: number = 4;
+  constructor(private tirageService: TirageService, private route: ActivatedRoute) { }
 
-  ngOnInit() {
-    this.personnes = this.tirageService.getPostulants();
+  ngOnInit() :void{
+      const listeId: string | null = this. route.snapshot.paramMap.get('id');
+      if(listeId){
+        this.tirageService.getPostulants(+listeId).subscribe(data => {
+        this.postulants = data
+      });
+      }
 }
 
 }

@@ -31,61 +31,72 @@ body {
   }
 
 
-    .tableau-style {
-      border-collapse: collapse;
-      min-width: 600px;
-      width: auto;
-      box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.10);
-      cursor: pointer;
-      margin: 60px 0px 50px 100px;
-      /* border: solid 2px midnightblue; */
-      /* border: solid 1px #76C7ED; */
-    }
-  
-    thead tr {
-      /* background: #76C7ED; */
-      color: #000;
-      text-align: center;
-    }
-    
-    th {
-      padding: 15px 15px;
-      
-    }
-    td {
-      padding: 20px;
-      font-weight: 600;
-      width: auto;
-    }
-  
-    section {
-      display: flex;
-    }
-  
-    .tirage {
-      margin-top: 60px;
-      margin-left: 10%;
-      width: 100%;
-    }
-  
-    span {
-      background-color: #76C7ED;
-      padding: 5px 35px;
-      width: auto;
-    }
+  .tableau-style {
+    border-collapse: collapse;
+    min-width: 400px;
+    width: auto;
+    box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.20);
+    cursor: pointer;
+    margin: 100px 0px 50px 100px;
+    /* border: solid 2px midnightblue; */
+    border: solid 1px #ddd;
+  }
 
-    .image {
-      margin-top: 40px;
-    }
+  thead tr {
+    background-color: #1DA1F2;
+    color: #000;
+    text-align: center;
+  }
 
-    img {
-      width: 600px;
-    }
+  th,
+  td {
+    padding: 15px 15px;
+  }
 
-    .description {
-      margin-left: 100px;
-    }
+  tbody,
+  th,
+  td {
+    border: solid 1px #ddd;
+  }
 
-    p {
-      font-weight: 600;
-    }
+  tbody tr:nth-child(even) {
+    background-color: #f3f3f3;
+  }
+
+  tbody tr:last-of-type {
+    border-bottom: solid 2px #1DA1F2;
+  }
+
+  section {
+    display: flex;
+  }
+
+  .tirage {
+    margin-top: 98px;
+    margin-left: 10%;
+    width: 100%;
+  }
+
+  button {
+  background: #1DA1F2;
+  border-radius: 20px;
+  width: 200px;
+  height: 35px;
+  display: block;
+  margin: 20px 100px;
+  font-weight: bold;
+  border: solid 0.75px;
+  }
+
+  .titretirage {
+    margin-left: 30px;
+    margin-bottom: 35px;
+  }
+
+  .description {
+    margin-left: 100px;
+  }
+
+  p {
+    font-weight: bold;
+  }

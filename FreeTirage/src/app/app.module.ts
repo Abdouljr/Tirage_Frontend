@@ -7,6 +7,8 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { FaireTirageComponent } from './faire-tirage/faire-tirage.component';
 import { DetailListeComponent } from './detail-liste/detail-liste.component';
 import { DetailTirageComponent } from './detail-tirage/detail-tirage.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ImportListeComponent } from './import-liste/import-liste.component';
 
 @NgModule({
   declarations: [
@@ -14,12 +16,17 @@ import { DetailTirageComponent } from './detail-tirage/detail-tirage.component';
     AccueilComponent,
     FaireTirageComponent,
     DetailListeComponent,
-    DetailTirageComponent
+    DetailTirageComponent,
+    ImportListeComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
-    AppRoutingModule
+  
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
