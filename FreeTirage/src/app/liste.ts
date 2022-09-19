@@ -1,5 +1,6 @@
 export class Liste{
-   public  libelle1: string;
+[x: string]: any;
+   public  libelle: string;
    public dateimport: string;
    public file: File;
    public id_list:Number;
