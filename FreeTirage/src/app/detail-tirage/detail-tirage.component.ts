@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Liste } from '../liste';
+import { NewTirage } from '../newtirage';
+import { PostulantsTries } from '../postulantsTries';
+import { RequeteserviceService } from '../requeteservice.service';
 import { TirageService } from '../tirage.service';
 
 @Component({
@@ -10,30 +13,42 @@ import { TirageService } from '../tirage.service';
 })
 export class DetailTirageComponent implements OnInit {
   postulantsTries: any;
-  tirages: any;
+  tirages: NewTirage;
   nombre: number = 0;
+  ptriees:PostulantsTries;
 
-  constructor(private tirageService: TirageService, private route: ActivatedRoute) { }
+  constructor(private request: RequeteserviceService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-      const listeId: string | null = this.route.snapshot.paramMap.get('id');
-      
+     
+      const id=this.route.snapshot.params['id']
+      this.getposttirees(id)
+      console.log(id);
+
       // if(listeId){
       //   this.tirageService.getPostulants().subscribe(data => {
       //   this.postulants = data
       // } )
       // }
 
-      if(listeId){
-        this.tirageService.getPostulantsTries(+listeId).subscribe(data => {
-          this.postulantsTries = data
-          console.table(this.postulantsTries)
-          for (const p of this.postulantsTries) {
-            this.nombre +=1
-          }
-          } )
-      }
+      // if(listeId){
+      //   this.tirageService.getPostulantsTries(id).subscribe(data => {
+      //     this.postulantsTries = data
+      //     console.table(this.postulantsTries)
+      //     // for (const p of this.postulantsTries) {
+      //     //   this.nombre +=1
+      //     // }
+      //     } )
+      // }
     }
+
+    getposttirees(id_tirage:number){
+      this.request.getPostulantsTries(id_tirage).subscribe(data=>{
+        this.postulantsTries=data
+        console.log(data);
+      })
+    }
+    
     
 
 

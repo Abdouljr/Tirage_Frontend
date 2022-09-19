@@ -5,7 +5,7 @@
 <h2>et là</h2>
 
 
-<h2>Liste des personnes triées de la liste Etudiant</h2>
+<h2>Liste des Personnes Tirés Pour cet Tirage</h2>
 <section>
     <div>
         <table class="tableau-style">
@@ -15,22 +15,24 @@
                     <th>Nom</th>
                     <th>Numero</th>
                     <th>Email</th>
+                    
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let p of postulantsTries">
-                    <td> {{p[3]}} </td>
-                    <td> {{p[0]}} </td>
                     <td> {{p[2]}} </td>
                     <td> {{p[1]}} </td>
+                    <td> {{p[3]}} </td>
+                    <td> {{p[0]}} </td>
+                    
                 </tr>             
             </tbody>
         </table>
-        <div class="description">           
-            <p>Nom : {{postulantsTries[0][5]}} </p>
-            <p>Nombre de personnes :  {{nombre}} </p>
+        <!-- <div class="description">           
+            <p>Nom : {{postulantsTries[2][2]}} </p>
+            <p>Nombre de personnes Tirés:  {{nombre}} </p>
             <p>Fait le : {{postulantsTries[0][4] | date: "dd/MM/yyyy"}} </p>
-        </div>:
+        </div> -->
     </div>        
     <div class="tirage">
         <img src="../../assets/img/tirage2.png">

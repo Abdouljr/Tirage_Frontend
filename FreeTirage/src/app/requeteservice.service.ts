@@ -46,16 +46,34 @@ export class RequeteserviceService {
 
    return this.http.get<Postulants[]> (`${this.apiUrl}/Postulant/list/${id_list}`);
   }
-//
-getNombreTirageParListe(id_list:number):Observable<any>{
 
-  return this.http.get(`${this.apiUrl}/tirage/findtirage/${id_list}`)
+//recuperer le nombre de t sur chaque liste
+getNombreTirageParListe():Observable<any>{
+
+  return this.http.get(`${this.apiUrl}/tirage/findnbretirage`)
+}
+// l'ensemble des tirages dans la bdd
+getNombreTirageTotal():Observable<any>{
+
+  return this.http.get(`${this.apiUrl}/tirage/findnbretiragetotal`)
 }
 
+//afficher les tirages tout les tirages d'une liste
   getTirageParListe(id_list:number):Observable<any>{
 
-    return this.http.get(`${this.apiUrl}/tirage/recupererTirageParIdlidte/${id_list}`)
+    return this.http.get(`${this.apiUrl}/tirage/liste/${id_list}`)
   }
 
+  //afficher les tirages tout les tirages d'une liste
+  getNbreTirageParListe(id_list:number):Observable<any>{
+
+    return this.http.get(`${this.apiUrl}/tirage/listetaille/${id_list}`)
+  }
+
+//postulants triés d'un tiraga
+  getPostulantsTries(id: number) : Observable<object> {
+    return this.http.get(`http://localhost:8080/tirage/findposttires/${id}`)
+  }
+  
 
 }

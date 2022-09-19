@@ -8,33 +8,48 @@
                     <th>Id</th>
                     <th>Prenom</th>
                     <th>Nom</th>
-                    <th>Numero</th>
                     <th>Email</th>
+                    
+                    <th>Numero</th>
+                    <th>Id de la liste</th>
+                   
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let n of postulants" >
                     <td> {{n.id_postulant}} </td>
                     <td> {{n.prenom}} </td>
+                    <td> {{n.email}} </td>
                     <td> {{n.nom}} </td>
                     <td> {{n.numero}} </td>
-                    <td> {{n.listImport.libelle}} </td>
+                    <td> {{n.listImport.id_list}}</td>
+                    <!-- <td> {{n.listImport.libelle}} </td> -->
 
                 </tr>             
             </tbody>
+
         </table>
         <div class="description">           
             <p>Nom : {{liste.libelle}} </p>
             <p>N° Personnes : {{nombre}} </p>
-            <p>Date de Création: {{liste.dateimport | date: "dd/MM/yyyy"}} </p>
+            <p>Date d'importation: {{liste.dateimport | date: "dd/MM/yyyy"}} </p>
         </div>
     </div>   
 
     <div class="tirage">
 
         <h2 class="titretirage">Tirages effectués sur cette liste</h2>
-        <p class="titretirate" *ngIf="!tirages"> Aucun tirages sur cette liste</p>
-        <p *ngFor="let t of tirages"><button [routerLink]="['/detailt', t.id_tirage]"> {{t.libelle_tirage}} </button></p>
+        <p class="titretirate" *ngIf=" !tirages "> 
+            <button>
+            Aucun tirages sur cette liste
+           </button>
+           </p> 
+
+        <p *ngFor="let t of tirages">
+            <!-- t[2] correspond au nom la tirages t(3) a lid du tirage-->
+
+            <button [routerLink]="['/detailt',t[0]]">{{t[2]}} </button>
+        </p>
     </div>          
 </section>
 

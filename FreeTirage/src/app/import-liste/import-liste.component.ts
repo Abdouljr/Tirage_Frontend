@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Liste } from '../liste';
 import { RequeteserviceService } from '../requeteservice.service';
 
@@ -42,6 +43,7 @@ this.formmodule=this.formB.group({
       }
     )
   }
+  
   
  
 }

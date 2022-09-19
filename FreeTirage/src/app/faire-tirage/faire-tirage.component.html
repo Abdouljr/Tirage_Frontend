@@ -21,7 +21,7 @@
     <label>Importer une liste à Trier</label>
     <input type="file"  name="file" formControlName="file" class="form-control" (change)="fileChange($event)"/>
     <label>Donner un nom à la liste</label>
-    <input type="text"  name="libelle1" formControlName="libelle1" class="form-control" />
+    <input type="text"  name="libelle" formControlName="libelle" class="form-control" />
   
 
     <!-- <label > Choississez une liste</label>
@@ -58,7 +58,7 @@
 
 
   <label > Choississez une liste</label>
-  <select class="form-select" id="select" formControlName="libelle1"   class="form-control" aria-label="Default select example">
+  <select class="form-select" id="select" formControlName="libelle"   class="form-control" aria-label="Default select example">
     <option *ngFor="let l of meslistes"  > {{l.libelle}}</option>
    
   </select>

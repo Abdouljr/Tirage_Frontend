@@ -16,7 +16,7 @@ export class DetailListeComponent {
  
   
   listes: any;
-  nombre: number = 0;
+  nombre: number;
 
 
   liste: Liste;
@@ -24,7 +24,6 @@ export class DetailListeComponent {
  
   tirages: any;
 
-  
   detailslistes$:any;
 
   constructor(private tirageService: TirageService,
@@ -37,6 +36,7 @@ export class DetailListeComponent {
       const id=this.route.snapshot.params['id']
       this.getpostulants(id);
       this.getTirageParListe(id);
+      
 
       this.service.getListes().subscribe(data => {
         this.listes = data;
@@ -45,19 +45,24 @@ export class DetailListeComponent {
           if(n.id_list == id){
             this.liste = n;
           }
+
         }
-        this.tirageService.getTirages(this.liste.libelle).subscribe(donnees_tirages => {
-          this.tirages = donnees_tirages;
-        })
+        // this.tirageService.getTirages(this.liste.libelle).subscribe(donnees_tirages => {
+        //   this.tirages = donnees_tirages;
+        // })
       })
 
-      this.route.params.subscribe(
-        (data)=>{
-          console.log(data)
-        }
-      )
+
+
+
+      // this.route.params.subscribe(
+      //   (data)=>{
+      //     console.log(data)
+      //   }
+      // )
       
      }
+     //////////fin ngOninit
      private getpostulants(id:number){
       this.service.getPostulants(id).subscribe(data=>{
         console.log(data)
@@ -67,16 +72,16 @@ export class DetailListeComponent {
 
       })  
      }
+//recuperer les tirages d'une liste
      getTirageParListe(id_list:number){
       this.service.getTirageParListe(id_list).subscribe(response=>{
         console.log(response)
-        this.detailslistes$=response;
+        this.tirages=response;
       })
      }
 
+}
+
+
      
    
-
-
-
-}

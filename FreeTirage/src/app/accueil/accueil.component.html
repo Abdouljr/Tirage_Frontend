@@ -57,7 +57,7 @@
               <h2 class="card-title"> Tirages effectués sur toute les listes </h2>
             
               <div class="cercle">
-                {{nb_tous_tirages}}
+                {{nb_tirage}}
               </div>
               
             
@@ -70,22 +70,22 @@
   <section id="hero" class="h-flex align-items-center">
     
     <div class="A">
-          <h1>Liste et Tirage </h1>
+          <h1>Mes Listes avec Tirages effectués </h1>
           <table class="table">
             <thead>
               <tr>
                 <th scope="col" name="num"> N°</th>
                 <th scope="col" name="nomliste">Nom Liste</th>
                 <th scope="col" name="nbredetirage" >Nombre de Tirage</th>
-                <th scope="col" name="dateimport" >Date </th>
+                <th scope="col" name="dateimport" >Date d'importation</th>
                 <th scope="col" name="action" >Actions</th>
               </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let l of liste  ">
+                <!-- <tr *ngFor="let l of liste  ">
                       <th scope="row">  {{l.id_list}}</th> 
                       <td>{{l.libelle}} </td>
-                      <td>{{nb_tirage}} </td>
+                      <td>{{listsdetails}} </td>
                       <td>{{l.dateimport | date: "dd/MM/yyyy"}} </td>
                       <td>
                         <button  class= "btn btn-sm btn-info"  [routerLink]="['/detaill',l.id_list]"> 
@@ -93,14 +93,29 @@
                       <button  class= "btn btn-sm btn-danger" > 
                         <i  class= "fa fa-remove" ></i> Supprimer 
                       </button> </td>
-                      
+              </tr> -->
 
+              <tr *ngFor="let l of listsdetails index as i ">
+                <th scope="row">{{l[1]}}</th> 
+                <td>{{l[2]}}</td>
+                <td>{{l[0]}}Tirage</td>
+                
+                <td>{{l[3] | date: "dd/MM/yyyy"}}</td>
+               
+                <td>
+                  <button  class= "btn btn-sm btn-info"  [routerLink]="['/detaill',l[1]]"> 
+                  <i  class= "fa fa-search" ></i> Détails </button> 
+                <button  class= "btn btn-sm btn-danger" > 
+                  <i  class= "fa fa-remove" ></i> Supprimer 
+                </button> </td>
+       
               </tr>
           </tbody>
 
-          </table>
+         </table>
          
     </div>
+    
    
   </section>
 

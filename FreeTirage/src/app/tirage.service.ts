@@ -28,33 +28,10 @@ getTiragesParListe() : Observable<Tirage[]> {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 getToutTirages() : Observable<object> {
   return this.http.get<object>(`http://localhost:8080/tirage/list`);
 }
 
-getPostulantsTries(id: number) : Observable<object> {
-  return this.http.get(`http://localhost:8080/tirage/postulants/${id}`)
-}
 
 }
 //   deletePostulantById(id: number) :Observable<Object[] | undefined> {

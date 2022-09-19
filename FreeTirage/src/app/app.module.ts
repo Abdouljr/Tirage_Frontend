@@ -30,8 +30,7 @@ import { NgbAlertModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap'
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgbPaginationModule,
-    NgbAlertModule
+    
   
     
   ],
