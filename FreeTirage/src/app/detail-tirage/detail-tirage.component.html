@@ -5,38 +5,36 @@
 <h2>et là</h2>
 
 
-<h2>Liste des personnes triées de la liste Etudiant</h2>
+<h2>Liste des Personnes Tirés Pour cet Tirage</h2>
 <section>
     <div>
         <table class="tableau-style">
             <thead>
                 <tr>
-                    <th>Id</th>
                     <th>Prenom</th>
                     <th>Nom</th>
                     <th>Numero</th>
                     <th>Email</th>
+                    
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let n of postulants">
-                    <td> {{n.id_postulant}} </td>
-                    <td> {{n.prenom}} </td>
-                    <td> {{n.nom}} </td>
-                    <td> {{n.numero}} </td>
-                    <td> {{n.email}} </td>
+                <tr *ngFor="let p of postulantsTries">
+                    <td> {{p[2]}} </td>
+                    <td> {{p[1]}} </td>
+                    <td> {{p[3]}} </td>
+                    <td> {{p[0]}} </td>
+                    
                 </tr>             
             </tbody>
         </table>
-        <div class="description">           
-            <p>Nom : ListeEtudiant</p>
-            <p>N° Personnes : {{tirages[0].libelle_tirage}} </p>
-            <p>Fait le : 12/03/2022</p>
-        </div>:
+        <!-- <div class="description">           
+            <p>Nom : {{postulantsTries[2][2]}} </p>
+            <p>Nombre de personnes Tirés:  {{nombre}} </p>
+            <p>Fait le : {{postulantsTries[0][4] | date: "dd/MM/yyyy"}} </p>
+        </div> -->
     </div>        
     <div class="tirage">
-        <h3 class="titretirage">Tirages effectués sur cette liste</h3>
-        <p *ngFor="let t of tirages"><button> {{t.libelle_tirage}}  </button></p>
-        
+        <img src="../../assets/img/tirage2.png">
     </div>          
 </section>

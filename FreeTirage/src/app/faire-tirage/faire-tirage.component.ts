@@ -26,14 +26,14 @@ export class FaireTirageComponent implements OnInit {
     this.options=this.formB.group({
       libelle_tirage:['',Validators.required],
       nbredepostulants:['',Validators.required],
-      libelle1:['',Validators.required],
+      libelle:['',Validators.required],
       file:['',Validators.required],
     }),
 
     this.options2=this.formB.group({
       libelle_tirage:['',Validators.required],
       nbredepostulants:['',Validators.required],
-      libelle1:['',Validators.required],
+      libelle:['',Validators.required],
 
     }),
 
@@ -46,7 +46,7 @@ export class FaireTirageComponent implements OnInit {
 
   ajoutiragewithliste(){
     this.newtirage= this.options2.value;
-    this.request.addtiragewithliste(this.newtirage.libelle_tirage,this.newtirage.libelle1,this.newtirage.nbredepostulants).subscribe(
+    this.request.addtiragewithliste(this.newtirage.libelle_tirage,this.newtirage.libelle,this.newtirage.nbredepostulants).subscribe(
       data=>{
             this.options2.reset();
       }
@@ -62,7 +62,7 @@ export class FaireTirageComponent implements OnInit {
 
   ajoutTirage(){
     this.newtirage = this.options.value
-    this.request.addtirage(this.newtirage.libelle_tirage,this.newtirage.nbredepostulants,this.newtirage.libelle1,this.file).subscribe(
+    this.request.addtirage(this.newtirage.libelle_tirage,this.newtirage.nbredepostulants,this.newtirage.libelle,this.file).subscribe(
       data =>{
         this.options.reset();
       }

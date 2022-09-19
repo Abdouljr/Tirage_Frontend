@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'FreeTirage';
+  nb_ti_liste: number = 0;
 }

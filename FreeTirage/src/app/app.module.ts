@@ -10,7 +10,7 @@ import { DetailTirageComponent } from './detail-tirage/detail-tirage.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ImportListeComponent } from './import-liste/import-liste.component';
 import { NgbAlertModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
-import { PaginationComponent } from './pagination/pagination.component';
+
 
 
 @NgModule({
@@ -21,7 +21,7 @@ import { PaginationComponent } from './pagination/pagination.component';
     DetailListeComponent,
     DetailTirageComponent,
     ImportListeComponent,
-    PaginationComponent,
+    
 
   ],
   imports: [
@@ -30,8 +30,7 @@ import { PaginationComponent } from './pagination/pagination.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgbPaginationModule,
-    NgbAlertModule
+    
   
     
   ],

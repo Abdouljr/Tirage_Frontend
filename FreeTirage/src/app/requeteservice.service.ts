@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { NewTirage } from './newtirage';
+import { Postulants } from './postulants';
 
 @Injectable({
   providedIn: 'root'
@@ -40,14 +41,39 @@ export class RequeteserviceService {
   getListes():Observable<Object>{
     return this.http.get(`${this.apiUrl}/liste/list`);
   }
+//recuperer les post par idlist
+  getPostulants(id_list:number):Observable<Postulants[]>{
 
-  getUsers() {
-     
-    let list = [];
- 
-    for (let index = 0; index < 100; index++) { 
-      list.push({num : "", nomliste :"", nbredetirage: " ", dateimport:"", action:""});
-    }
-    return list;
+   return this.http.get<Postulants[]> (`${this.apiUrl}/Postulant/list/${id_list}`);
   }
+
+//recuperer le nombre de t sur chaque liste
+getNombreTirageParListe():Observable<any>{
+
+  return this.http.get(`${this.apiUrl}/tirage/findnbretirage`)
+}
+// l'ensemble des tirages dans la bdd
+getNombreTirageTotal():Observable<any>{
+
+  return this.http.get(`${this.apiUrl}/tirage/findnbretiragetotal`)
+}
+
+//afficher les tirages tout les tirages d'une liste
+  getTirageParListe(id_list:number):Observable<any>{
+
+    return this.http.get(`${this.apiUrl}/tirage/liste/${id_list}`)
+  }
+
+  //afficher les tirages tout les tirages d'une liste
+  getNbreTirageParListe(id_list:number):Observable<any>{
+
+    return this.http.get(`${this.apiUrl}/tirage/listetaille/${id_list}`)
+  }
+
+//postulants triés d'un tiraga
+  getPostulantsTries(id: number) : Observable<object> {
+    return this.http.get(`http://localhost:8080/tirage/findposttires/${id}`)
+  }
+  
+
 }

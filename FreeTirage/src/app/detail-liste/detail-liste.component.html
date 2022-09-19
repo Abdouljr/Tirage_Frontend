@@ -1,9 +1,4 @@
 
-<div>
-    <p>ici/p>
-</div>
-
-<h1>et là</h1>
 
 <section>
     <div>
@@ -13,31 +8,48 @@
                     <th>Id</th>
                     <th>Prenom</th>
                     <th>Nom</th>
-                    <th>Numero</th>
                     <th>Email</th>
+                    
+                    <th>Numero</th>
+                    <th>Id de la liste</th>
+                   
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let n of postulants">
+                <tr *ngFor="let n of postulants" >
                     <td> {{n.id_postulant}} </td>
                     <td> {{n.prenom}} </td>
+                    <td> {{n.email}} </td>
                     <td> {{n.nom}} </td>
                     <td> {{n.numero}} </td>
-                    <td> {{n.email}} </td>
+                    <td> {{n.listImport.id_list}}</td>
+                    <!-- <td> {{n.listImport.libelle}} </td> -->
+
                 </tr>             
             </tbody>
+
         </table>
         <div class="description">           
-            <p>Nom : ListeEtudiant</p>
+            <p>Nom : {{liste.libelle}} </p>
             <p>N° Personnes : {{nombre}} </p>
-            <p>Fait le : 12/03/2022</p>
-        </div>:ks
-    </div>        
+            <p>Date d'importation: {{liste.dateimport | date: "dd/MM/yyyy"}} </p>
+        </div>
+    </div>   
+
     <div class="tirage">
-        <h3 class="titretirage">Tirages effectués sur cette liste</h3>
-        <button>Tirages </button>
-        <button>Tirages </button>
-        <button>Tirages </button>
+
+        <h2 class="titretirage">Tirages effectués sur cette liste</h2>
+        <p class="titretirate" *ngIf=" !tirages "> 
+            <button>
+            Aucun tirages sur cette liste
+           </button>
+           </p> 
+
+        <p *ngFor="let t of tirages">
+            <!-- t[2] correspond au nom la tirages t(3) a lid du tirage-->
+
+            <button [routerLink]="['/detailt',t[0]]">{{t[2]}} </button>
+        </p>
     </div>          
 </section>
 
