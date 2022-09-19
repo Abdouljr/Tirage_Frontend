@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Liste } from '../liste';
 import { TirageService } from '../tirage.service';
 
 @Component({
