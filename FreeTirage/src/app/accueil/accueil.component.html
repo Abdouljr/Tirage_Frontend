@@ -95,17 +95,17 @@
                       </button> </td>
               </tr> -->
 
-              <tr *ngFor="let l of listsdetails index as i ">
-                <th scope="row">{{l[1]}}</th> 
-                <td>{{l[2]}}</td>
-                <td>{{l[0]}}Tirage</td>
+              <tr *ngFor="let l of liste index as i ">
+                <th scope="row">{{l.id_list}}</th> 
+                <td>{{l.libelle}}</td>
+                <td>{{l.nombre_tirage}}Tirage</td>
                 
-                <td>{{l[3] | date: "dd/MM/yyyy"}}</td>
+                <td>{{l.dateimport | date: "dd/MM/yyyy"}}</td>
                
                 <td>
-                  <button  class= "btn btn-sm btn-info"  [routerLink]="['/detaill',l[1]]"> 
+                  <button  class= "btn btn-sm btn-info"  [routerLink]="['/detaill',l.id_list]"> 
                   <i  class= "fa fa-search" ></i> Détails </button> 
-                <button  class= "btn btn-sm btn-danger" > 
+                <button  class= "btn btn-sm btn-danger"> 
                   <i  class= "fa fa-remove" ></i> Supprimer 
                 </button> </td>
        
@@ -113,7 +113,6 @@
           </tbody>
 
          </table>
-         
     </div>
     
    
