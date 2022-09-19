@@ -61,7 +61,7 @@
         <p *ngFor="let t of tirages">
             <!-- t[2] correspond au nom la tirages t(3) a lid du tirage-->
 
-            <button [routerLink]="['/detailt',t[0]]">{{t[2]}} </button>
+            <button [routerLink]="['/detailt',t.id_tirage]">{{t.libelle_tirage}} </button>
         </p>
 >>>>>>> ec54488f53af2c0dd46fef27e9238b41dc4de797
     </div>          

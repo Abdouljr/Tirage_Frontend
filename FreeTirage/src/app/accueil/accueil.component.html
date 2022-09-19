@@ -85,28 +85,41 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let l of liste ">
-                <th scope="row">  {{l.id_list}}</th> 
-                <td>{{l.libelle}} </td>
-                <td>222 </td>
-                <td>{{l.dateimport | date: "dd/MM/yyyy"}} </td>
-                <td><button   class= "btn btn-sm btn-info"  [routerLink]="['/detaill',l.id_list]"> 
+            
+                <!-- <tr *ngFor="let l of liste  ">
+                      <th scope="row">  {{l.id_list}}</th> 
+                      <td>{{l.libelle}} </td>
+                      <td>{{listsdetails}} </td>
+                      <td>{{l.dateimport | date: "dd/MM/yyyy"}} </td>
+                      <td>
+                        <button  class= "btn btn-sm btn-info"  [routerLink]="['/detaill',l.id_list]"> 
+                        <i  class= "fa fa-search" ></i> Détails </button> 
+                      <button  class= "btn btn-sm btn-danger" > 
+                        <i  class= "fa fa-remove" ></i> Supprimer 
+                      </button> </td>
+              </tr> -->
+
+              <tr *ngFor="let l of liste index as i ">
+                <th scope="row">{{l.id_list}}</th> 
+                <td>{{l.libelle}}</td>
+                <td>{{l.nombre_tirage}}Tirage</td>
+                
+                <td>{{l.dateimport | date: "dd/MM/yyyy"}}</td>
+               
+                <td>
+                  <button  class= "btn btn-sm btn-info"  [routerLink]="['/detaill',l.id_list]"> 
+
+             
                   <i  class= "fa fa-search" ></i> Détails </button> 
-                <button  class= "btn btn-sm btn-danger" > 
+                <button  class= "btn btn-sm btn-danger"> 
                   <i  class= "fa fa-remove" ></i> Supprimer 
                 </button> </td>
        
               </tr>
-            </tbody>
-          </table>
-    </div>
-    <div class="mesbtn">
-      <div>
-        <button type="button" class="btn btn-primary">Precedent</button>
-      </div>
-      <div>
-      <button type="button" class="btn btn-primary">Suivant</button>
-      </div>
+
+          </tbody>
+
+         </table>
     </div>
     
    
