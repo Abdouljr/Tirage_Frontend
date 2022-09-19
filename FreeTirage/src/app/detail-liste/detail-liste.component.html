@@ -23,9 +23,8 @@
                     <td> {{n.prenom}} </td>
                     <td> {{n.nom}} </td>
                     <td> {{n.numero}} </td>
-                    <td> {{n.email}} </td>
-                    
-                </tr>             
+                    <td> {{n.email}} </td>             
+                </tr>  
             </tbody>
         </table>
         <div class="description">           
@@ -35,8 +34,12 @@
         </div>
     </div>        
     <div class="tirage">
-        <h3 class="titretirage">Tirages effectués sur cette liste</h3>
-        <p *ngFor="let t of tirages"><button  [routerLink]="['/detailt',t.id_tirage]"> {{t.libelle_tirage}}  </button></p>      
+        <h2 class="titretirage">Tirages effectués sur cette liste</h2>
+        <p class="aucunTirage" *ngIf="!tirages">Aucun tirages sur cette liste</p>           
+        <p *ngFor="let t of tirages" class="tirage_sup">
+            <button class="bouton" [routerLink]="['/detailt',t.id_tirage]"> {{t.libelle_tirage}}</button>
+            <button (click)="supprimer(t.id_tirage)" class="btn btn-danger" ><i class="bi bi-trash"></i></button>
+        </p>      
     </div>          
 </section>
 

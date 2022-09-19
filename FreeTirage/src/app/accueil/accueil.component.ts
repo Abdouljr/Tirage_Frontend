@@ -34,28 +34,13 @@ export class AccueilComponent implements OnInit {
   getlist(){
     this.service.getListes().subscribe(
       response => {
-        console.log(response);
         this.liste = response;
-        for (const l of this.liste) {
-          this.tirageService.getTirages(l.libelle).subscribe(donnee_tirage => {
-            this.nb_tirages = donnee_tirage;
-            
-            console.log("+++++++++" + console.table(this.nb_tirages))
-            for (const t of this.nb_tirages) {
-              this.nb_tirage += 1;
-            }
-
-            console.log("=======" + console.table( this.tirages));
-          }) 
-      }
+        
       }
     );
   }
 
-  // vaSurDetaill(id :any) {
-  //   console.log(id)
-  //   this.router.navigate(["/detaill"],id)
-  // }
-}
+};
+
 
 

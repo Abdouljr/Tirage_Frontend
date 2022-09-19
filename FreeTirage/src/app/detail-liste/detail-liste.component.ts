@@ -20,6 +20,11 @@ export class DetailListeComponent {
      private router: Router) { }
 
   ngOnInit() :void{
+    this.initialiser()
+
+    }
+
+    initialiser(){
       const listeId: string | null = this. route.snapshot.paramMap.get('id');
       if(listeId){
         this.tirageService.getPostulantParListe(+listeId).subscribe(data => {
@@ -43,10 +48,15 @@ export class DetailListeComponent {
             console.table(this.tirages);
           }) 
         });
-
     }
 
     vaSurDetailt(){
       this.router.navigate(['/detailt']);
+    }
+
+    supprimer(id: number){
+      this.tirageService.deleteTirage(id);
+      this.initialiser();
+
     }
 }

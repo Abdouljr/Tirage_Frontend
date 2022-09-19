@@ -5,6 +5,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { DetailListeComponent } from './detail-liste/detail-liste.component';
 import { DetailTirageComponent } from './detail-tirage/detail-tirage.component';
 import { ImportListeComponent } from './import-liste/import-liste.component';
+import { PageNotFondComponent } from './page-not-fond/page-not-fond.component';
  
 //creer une route pour d'un composant vers un autreici
 
@@ -21,9 +22,8 @@ const routes: Routes = [
   {path:"detaill/:id",component:DetailListeComponent},
   {path:"detailt/:id",component:DetailTirageComponent},
   {path:"import",component:ImportListeComponent},
+  {path:"**",component:PageNotFondComponent}
 
-  
-  
 ];
 
 
