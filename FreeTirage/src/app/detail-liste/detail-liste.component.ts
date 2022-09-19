@@ -32,6 +32,48 @@ export class DetailListeComponent {
 
      private router: Router) { }
 
+<<<<<<< HEAD
+  ngOnInit() :void{
+    this.initialiser()
+
+    }
+
+    initialiser(){
+      const listeId: string | null = this. route.snapshot.paramMap.get('id');
+      if(listeId){
+        this.tirageService.getPostulantParListe(+listeId).subscribe(data => {
+        this.postulants = data
+        for (const n of this.postulants) {
+            this.nombre += 1;
+        }
+        });
+      }
+
+      this.service.getListes().subscribe(
+        response => {
+          this.listes = response;
+          for (const l of this.listes) {
+              if(l.id_list == listeId){
+                this.liste = l;
+              }
+          }
+          this.tirageService.getTirages(this.liste.libelle).subscribe(donnee_tirage => {
+            this.tirages = donnee_tirage;
+            console.table(this.tirages);
+          }) 
+        });
+    }
+
+    vaSurDetailt(){
+      this.router.navigate(['/detailt']);
+    }
+
+    supprimer(id: number){
+      this.tirageService.deleteTirage(id);
+      this.initialiser();
+
+    }
+=======
      ngOnInit() :void{
       const id=this.route.snapshot.params['id']
       this.getpostulants(id);
@@ -80,6 +122,7 @@ export class DetailListeComponent {
       })
      }
 
+>>>>>>> ec54488f53af2c0dd46fef27e9238b41dc4de797
 }
 
 

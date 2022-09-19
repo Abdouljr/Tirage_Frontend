@@ -72,13 +72,13 @@ body {
       width: 100%;
     }
 
-    button {
+    .bouton {
     background: #76C7ED;
     border-radius: 20px;
     width: 200px;
     height: 35px;
     display: block;
-    margin: 20px 100px;
+    margin: 0px 10px 0px 20%;
     font-weight: bold;
     border: solid 0.75px;
     }
@@ -92,6 +92,23 @@ body {
       margin-left: 100px;
     }
 
+    .aucunTirage {
+      margin-left: 25%;
+    }
+
     p {
       font-weight: bold;
     }
+
+    h2 {
+      font-size: 25px;
+    }
+
+    .tirage_sup{
+      display: flex;
+    }
+
+    p.tirage_sup {
+      margin-bottom: 30px;
+    }
+

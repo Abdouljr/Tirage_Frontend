@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Liste } from '../liste';
 import { NewTirage } from '../newtirage';
 import { PostulantsTries } from '../postulantsTries';
 import { RequeteserviceService } from '../requeteservice.service';
-import { TirageService } from '../tirage.service';
 
 @Component({
   selector: 'app-detail-tirage',

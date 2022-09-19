@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+<<<<<<< HEAD
+@import '~bootstrap/dist/css/bootstrap.css';
+@import "~bootstrap-icons/font/bootstrap-icons.css"
+=======
 @import '~bootstrap/dist/css/bootstrap.css'
 
 
+>>>>>>> ec54488f53af2c0dd46fef27e9238b41dc4de797

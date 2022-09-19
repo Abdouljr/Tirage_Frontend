@@ -21,7 +21,6 @@ import { ImportListeComponent } from './import-liste/import-liste.component';
     DetailListeComponent,
     DetailTirageComponent,
     ImportListeComponent,
-    
 
   ],
   imports: [

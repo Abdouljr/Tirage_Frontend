@@ -33,9 +33,10 @@ getToutTirages() : Observable<object> {
 }
 
 
+deleteTirage(id: number) :boolean{
+   this.http.delete(`http://localhost:8080/tirage/delete/${id}`);
+   return true;
 }
-//   deletePostulantById(id: number) :Observable<Object[] | undefined> {
-//      return this.http.get<object>(`http://localhost:8080/delete/${id}`);
-    
-// }
+
+}
 

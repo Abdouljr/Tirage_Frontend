@@ -50,8 +50,10 @@ export class AccueilComponent implements OnInit {
   getlist(){
     this.service.getListes().subscribe(
       response => {
-        console.log(response);
         this.liste = response;
+<<<<<<< HEAD
+        
+=======
       //   for (const l of this.liste) {
       //     this.tirageService.getTirages(l.libelle).subscribe(donnee_tirage => {
       //       this.nb_tirages = donnee_tirage;
@@ -64,10 +66,15 @@ export class AccueilComponent implements OnInit {
       //       console.log("=======" + console.table( this.tirages));
       //     }) 
       // }
+>>>>>>> ec54488f53af2c0dd46fef27e9238b41dc4de797
       }
     );
   }
 
+<<<<<<< HEAD
+};
+
+=======
 
 //recuperer le nombre de tirage sur une liste
 
@@ -105,5 +112,6 @@ getTirageParListe(id_list:number){
 
  
 }
+>>>>>>> ec54488f53af2c0dd46fef27e9238b41dc4de797
 
 

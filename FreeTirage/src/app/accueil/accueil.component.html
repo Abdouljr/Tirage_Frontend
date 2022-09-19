@@ -74,14 +74,18 @@
           <table class="table">
             <thead>
               <tr>
-                <th scope="col" name="num"> N°</th>
-                <th scope="col" name="nomliste">Nom Liste</th>
-                <th scope="col" name="nbredetirage" >Nombre de Tirage</th>
-                <th scope="col" name="dateimport" >Date d'importation</th>
-                <th scope="col" name="action" >Actions</th>
+                <th scope="col">N°</th>
+                <th scope="col">Nom Liste</th>
+                <th scope="col">Nombre de tirages</th>
+                <th scope="col">Date de création</th>
+              
+                <th scope="col">Actions
+                </th>
+                
               </tr>
             </thead>
             <tbody>
+            
                 <!-- <tr *ngFor="let l of liste  ">
                       <th scope="row">  {{l.id_list}}</th> 
                       <td>{{l.libelle}} </td>
@@ -104,12 +108,15 @@
                
                 <td>
                   <button  class= "btn btn-sm btn-info"  [routerLink]="['/detaill',l.id_list]"> 
+
+             
                   <i  class= "fa fa-search" ></i> Détails </button> 
                 <button  class= "btn btn-sm btn-danger"> 
                   <i  class= "fa fa-remove" ></i> Supprimer 
                 </button> </td>
        
               </tr>
+
           </tbody>
 
          </table>

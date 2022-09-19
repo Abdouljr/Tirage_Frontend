@@ -22,10 +22,15 @@
                     <td> {{n.email}} </td>
                     <td> {{n.nom}} </td>
                     <td> {{n.numero}} </td>
+<<<<<<< HEAD
+                    <td> {{n.email}} </td>             
+                </tr>  
+=======
                     <td> {{n.listImport.id_list}}</td>
                     <!-- <td> {{n.listImport.libelle}} </td> -->
 
                 </tr>             
+>>>>>>> ec54488f53af2c0dd46fef27e9238b41dc4de797
             </tbody>
 
         </table>
@@ -37,6 +42,14 @@
     </div>   
 
     <div class="tirage">
+<<<<<<< HEAD
+        <h2 class="titretirage">Tirages effectués sur cette liste</h2>
+        <p class="aucunTirage" *ngIf="!tirages">Aucun tirages sur cette liste</p>           
+        <p *ngFor="let t of tirages" class="tirage_sup">
+            <button class="bouton" [routerLink]="['/detailt',t.id_tirage]"> {{t.libelle_tirage}}</button>
+            <button (click)="supprimer(t.id_tirage)" class="btn btn-danger" ><i class="bi bi-trash"></i></button>
+        </p>      
+=======
 
         <h2 class="titretirage">Tirages effectués sur cette liste</h2>
         <p class="titretirate" *ngIf=" !tirages "> 
@@ -50,6 +63,7 @@
 
             <button [routerLink]="['/detailt',t.id_tirage]">{{t.libelle_tirage}} </button>
         </p>
+>>>>>>> ec54488f53af2c0dd46fef27e9238b41dc4de797
     </div>          
 </section>
 
