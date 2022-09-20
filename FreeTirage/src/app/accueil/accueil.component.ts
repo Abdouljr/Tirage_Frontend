@@ -20,6 +20,7 @@ export class AccueilComponent implements OnInit {
   nb_tirages: any;
   nb_tirage: any;
   listsdetails:any;
+  listtriees:any;
   constructor(
     private service:RequeteserviceService,
       private tirageService: TirageService,
@@ -31,6 +32,7 @@ export class AccueilComponent implements OnInit {
       this.getlist();
       this.getNombreTirage();
       this.getnbretiragetotal();
+      this.getNombreListetrieees();
      
       this.tirageService.getToutTirages().subscribe(data => {
         this.tirages = data
@@ -96,14 +98,17 @@ getTirageParListe(id_list:number){
   })
 
   //return taille.length
-  
- }
 
+}
+getNombreListetrieees(){
+  this.service.getNombreListetriees().subscribe(
+    data=>{
+      console.log(data)
+      this.listtriees=data;
+    }
+  )
+}
 
-
-
-
- 
 }
 
 

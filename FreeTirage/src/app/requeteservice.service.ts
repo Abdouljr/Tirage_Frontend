@@ -75,5 +75,8 @@ getNombreTirageTotal():Observable<any>{
     return this.http.get(`http://localhost:8080/tirage/findposttires/${id}`)
   }
   
+  getNombreListetriees() : Observable<any> {
+    return this.http.get(`http://localhost:8080/liste/listtriees`)
+  }
 
 }
